@@ -37,9 +37,9 @@ function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <a className="brand" href="#home" onClick={() => setActiveNav('home')} aria-label="마음온 홈">
+        <a className="brand" href="#home" onClick={() => setActiveNav('home')} aria-label="토닥 홈">
           <span className="brand-mark"><span>m</span></span>
-          <span className="brand-name">마음온<span>maeum:on</span></span>
+          <span className="brand-name">토닥<span>todak care</span></span>
         </a>
 
         <div className="side-caption">함께 돌보기</div>
@@ -60,12 +60,12 @@ function App() {
           <button className="text-button" onClick={() => setNotice(true)}>가족 관리 <span>→</span></button>
         </div>
         <button className="nav-item settings-item" onClick={() => setNotice(true)}><Icon>⚙</Icon><span>설정</span></button>
-        <div className="profile-row"><div className="avatar avatar-profile">김</div><div className="profile-copy"><strong>김정희 어르신</strong><span>마음온 이용 중</span></div><button className="more-button" aria-label="프로필 메뉴" onClick={() => setNotice(true)}>···</button></div>
+        <div className="profile-row"><div className="avatar avatar-profile">김</div><div className="profile-copy"><strong>김정희 어르신</strong><span>토닥과 함께하는 중</span></div><button className="more-button" aria-label="프로필 메뉴" onClick={() => setNotice(true)}>···</button></div>
       </aside>
 
       <main className="main-content" id="home">
         <header className="topbar">
-          <div className="breadcrumb">마음온 <span>/</span> {activeLabel}</div>
+          <div className="breadcrumb">토닥 <span>/</span> {activeLabel}</div>
           <div className="top-actions"><span className="today-date">2026년 9월 26일 토요일</span><button className="notification-button" aria-label="알림 보기" onClick={() => setNotice(true)}><Icon>♧</Icon><i /></button><div className="avatar avatar-profile top-avatar">김</div></div>
         </header>
 
@@ -124,11 +124,11 @@ function App() {
           {activeNav === 'places' && <PlacesView />}
 
           <section className="center-strip"><div className="center-icon">⌖</div><div><strong>가까운 곳에서 도움을 받아보세요</strong><span>치매안심센터에서 인지 건강 상담과 다양한 프로그램을 안내해 드려요.</span></div><button onClick={() => setActiveNav('places')}>주변 기관 찾기 <span>→</span></button></section>
-          <footer className="page-footer"><span>마음온은 일상 속 안부를 함께 살펴보는 웰니스 서비스예요. 화면의 통화와 분석은 시연용 예시입니다.</span><button onClick={() => setNotice(true)}>개인정보 및 이용 안내</button></footer>
+          <footer className="page-footer"><span>토닥은 일상 속 안부를 함께 살펴보는 웰니스 서비스예요. 화면의 통화와 분석은 시연용 예시입니다.</span><button onClick={() => setNotice(true)}>개인정보 및 이용 안내</button></footer>
         </div>
       </main>
 
-      {notice && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setNotice(false) }}><section className="dialog" role="dialog" aria-modal="true" aria-labelledby="notice-title"><button className="dialog-close" onClick={() => setNotice(false)} aria-label="닫기">×</button><div className="dialog-mark">♡</div><div className="section-kicker">마음온 안내</div><h2 id="notice-title">가족과 어르신의 동의가<br />가장 먼저예요</h2><p>통화 분석은 어르신과 통화 상대방이 충분히 안내받고 동의한 경우에만 진행돼요. 대화 흐름은 참고 정보이며, 치매 진단이나 의료 판단을 대신하지 않습니다.</p><div className="dialog-tip"><strong>걱정되는 변화가 있다면</strong><span>가까운 치매안심센터 또는 의료기관에 상담을 요청해 주세요.</span></div><button className="dialog-primary" onClick={() => setNotice(false)}>확인했어요</button></section></div>}
+      {notice && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setNotice(false) }}><section className="dialog" role="dialog" aria-modal="true" aria-labelledby="notice-title"><button className="dialog-close" onClick={() => setNotice(false)} aria-label="닫기">×</button><div className="dialog-mark">♡</div><div className="section-kicker">토닥 안내</div><h2 id="notice-title">가족과 어르신의 동의가<br />가장 먼저예요</h2><p>통화 분석은 어르신과 통화 상대방이 충분히 안내받고 동의한 경우에만 진행돼요. 대화 흐름은 참고 정보이며, 치매 진단이나 의료 판단을 대신하지 않습니다.</p><div className="dialog-tip"><strong>걱정되는 변화가 있다면</strong><span>가까운 치매안심센터 또는 의료기관에 상담을 요청해 주세요.</span></div><button className="dialog-primary" onClick={() => setNotice(false)}>확인했어요</button></section></div>}
       {showCall && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setShowCall(false) }}><section className="dialog call-dialog" role="dialog" aria-modal="true" aria-labelledby="call-title"><button className="dialog-close" onClick={() => setShowCall(false)} aria-label="닫기">×</button><div className="call-detail-icon">♡</div><div className="section-kicker">오늘 오후 2:18 · 12분 34초</div><h2 id="call-title">서연님과 안부를 나눴어요</h2><p>오늘 일정과 점심 식사 이야기를 나눴어요. 익숙한 대화를 편안하게 이어가셨어요.</p><div className="detail-tags"><span>일상 대화</span><span>대화 흐름 안정</span><span>가족 통화</span></div><div className="dialog-tip"><strong>참고 안내</strong><span>이 요약은 통화 흐름을 바탕으로 한 참고 정보예요. 의료 진단으로 사용하지 마세요.</span></div><button className="dialog-primary" onClick={() => setShowCall(false)}>닫기</button></section></div>}
     </div>
   )
@@ -137,7 +137,7 @@ function App() {
 function PlacesView() {
   const [region, setRegion] = useState('')
   const [searched, setSearched] = useState(false)
-  return <section className="secondary-view"><div className="secondary-intro"><div><div className="section-kicker">필요할 때 가까운 도움을</div><h2>주변 치매안심센터 찾기</h2><p>치매안심센터에서 상담, 조기 검진 안내와 가족 지원 프로그램을 받을 수 있어요.</p></div><span className="places-mark">⌖</span></div><article className="panel places-search"><label htmlFor="region-search">지역을 입력해 주세요</label><div className="search-row"><input id="region-search" value={region} onChange={(event) => setRegion(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') setSearched(true) }} placeholder="예: 서울시 종로구"/><button onClick={() => setSearched(true)}>기관 찾기 <span>→</span></button></div><small>{searched && region ? `‘${region}’ 주변 기관을 확인하려면 실제 위치 검색 서비스를 연결해 주세요.` : '지역 검색은 서비스 연동 후 이용할 수 있어요.'}</small></article><div className="place-list-heading"><strong>도움받을 수 있는 곳</strong><span>기관 정보는 관할 보건소에서 확인해 주세요</span></div><div className="place-list"><article className="panel place-card"><div className="place-symbol">✳</div><div className="place-card-copy"><span className="place-type">상담 · 검진 안내</span><h3>지역 치매안심센터</h3><p>인지 선별검사, 상담, 가족 지원 프로그램</p><small>가까운 센터 위치와 운영 시간은 관할 기관에서 확인할 수 있어요.</small></div><span className="place-arrow">↗</span></article><article className="panel place-card"><div className="place-symbol health">＋</div><div className="place-card-copy"><span className="place-type">건강 상담</span><h3>관할 보건소</h3><p>지역 인지 건강 서비스 및 연계 안내</p><small>방문 전 전화로 운영 시간과 지원 내용을 문의해 주세요.</small></div><span className="place-arrow">↗</span></article></div><p className="places-note">마음온 시연 화면에는 실시간 위치 검색이 연결되어 있지 않아요. 정확한 기관 정보는 중앙치매센터 또는 관할 보건소에서 확인해 주세요.</p></section>
+  return <section className="secondary-view"><div className="secondary-intro"><div><div className="section-kicker">필요할 때 가까운 도움을</div><h2>주변 치매안심센터 찾기</h2><p>치매안심센터에서 상담, 조기 검진 안내와 가족 지원 프로그램을 받을 수 있어요.</p></div><span className="places-mark">⌖</span></div><article className="panel places-search"><label htmlFor="region-search">지역을 입력해 주세요</label><div className="search-row"><input id="region-search" value={region} onChange={(event) => setRegion(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') setSearched(true) }} placeholder="예: 서울시 종로구"/><button onClick={() => setSearched(true)}>기관 찾기 <span>→</span></button></div><small>{searched && region ? `‘${region}’ 주변 기관을 확인하려면 실제 위치 검색 서비스를 연결해 주세요.` : '지역 검색은 서비스 연동 후 이용할 수 있어요.'}</small></article><div className="place-list-heading"><strong>도움받을 수 있는 곳</strong><span>기관 정보는 관할 보건소에서 확인해 주세요</span></div><div className="place-list"><article className="panel place-card"><div className="place-symbol">✳</div><div className="place-card-copy"><span className="place-type">상담 · 검진 안내</span><h3>지역 치매안심센터</h3><p>인지 선별검사, 상담, 가족 지원 프로그램</p><small>가까운 센터 위치와 운영 시간은 관할 기관에서 확인할 수 있어요.</small></div><span className="place-arrow">↗</span></article><article className="panel place-card"><div className="place-symbol health">＋</div><div className="place-card-copy"><span className="place-type">건강 상담</span><h3>관할 보건소</h3><p>지역 인지 건강 서비스 및 연계 안내</p><small>방문 전 전화로 운영 시간과 지원 내용을 문의해 주세요.</small></div><span className="place-arrow">↗</span></article></div><p className="places-note">토닥 시연 화면에는 실시간 위치 검색이 연결되어 있지 않아요. 정확한 기관 정보는 중앙치매센터 또는 관할 보건소에서 확인해 주세요.</p></section>
 }
 
 export default App
