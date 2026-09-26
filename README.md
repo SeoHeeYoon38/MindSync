@@ -1,16 +1,19 @@
-# React + Vite
+# 토닥
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+가족이 어르신의 안부와 인지 웰니스를 함께 살펴보는 서비스의 프론트엔드 프로토타입입니다.
 
-Currently, two official plugins are available:
+## 화면
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 보호자 대시보드와 예시 통화 요약
+- 주간·월간 대화 흐름 리포트
+- 인지 웰니스 활동 체크
+- 치매안심센터·보건소 안내
 
-## React Compiler
+통화 기록, AI 분석 결과, 위치 검색은 시연용 예시이며 실제 통화 처리나 의료 진단 기능은 연결되어 있지 않습니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 실행
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```sh
+npm install
+npm run dev
+```
