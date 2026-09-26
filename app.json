@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "토닥",
+    "slug": "todak",
+    "description": "가족이 어르신의 안부와 인지 웰니스를 함께 살펴보는 서비스",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.todak.care"
+    },
+    "android": {
+      "package": "com.todak.care",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "splash": { "backgroundColor": "#F5F7F5", "image": "./assets/splash-icon.png", "resizeMode": "contain" }
+  }
+}
